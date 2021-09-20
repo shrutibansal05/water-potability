@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Information</title>
+
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Let's Test!!!</h1>
+        <div class="container">
+            <div class="info-content">
+                <h3 style="font-size: 2em" class="form-title">{{ prediction_text }}</h3>
+                <form action="{{ url_for('predict')}}" method="POST" class="info-form">
+                    <h2 class="form-title">Please provide the information</h2>
+							<div class="information">
+          						<input type="text" name="ph" placeholder="pH">
+          						<input type="text" name="hardness" placeholder="Hardness in mg/L">
+          						<input type="text" name="solids" placeholder="Dissolved solids in ppm">
+          						<input type="text" name="chloramines" placeholder="Chloramines in ppm">
+								<input type="text" name="sulfates" placeholder="Sulfates dissolved in mg/L">
+          						<input type="text" name="conductivity" placeholder="Electrical conductivity in μS/cm">
+          						<input type="text" name="carbon" placeholder="Organic carbon in ppm">
+          						<input type="text" name="trihalomethanes" placeholder="Trihalomethanes in μg/L">
+								<input type="text" name="turbidity" placeholder="Turbidity">
+        					</div>
+							<button type="submit" >Predict</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
